@@ -1,0 +1,21 @@
+
+
+Notes:
+  - Have "Running Program _..." at the start of each method
+  - Have menu pop up after finishing any program to select next program to play(programs 1-5 and quit option aswell)
+  - 
+
+Program 1:
+  - 
+
+Program 2:
+  - 
+
+Program 3:
+  - 
+
+Program 4:
+  - 
+
+Program 5:
+  - 
