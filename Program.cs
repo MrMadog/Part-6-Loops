@@ -4,52 +4,6 @@
     {
         static void Main(string[] args)
         {
-/*            
-            string selection;
-            bool done, done1;
-            done = false;
-            done1 = false;
-            double price;
-            int age;
-            do
-            {
-                Console.WriteLine("Who has a better captain? ");
-                Console.WriteLine("a - Captain Kirk");
-                Console.WriteLine("b - Captain Pircard");
-                selection = Console.ReadLine();
-            } while (selection != "a");
-
-
-            do
-            {
-                Console.WriteLine("Hello");
-                Console.WriteLine("How much money do you have?");
-                if (Double.TryParse(Console.ReadLine(), out price))
-                {
-                    done = true;
-                }
-
-            }while (done != true);
-
-            Console.WriteLine(price);
-
-
-            while (done1 != true)
-            {
-                Console.Write("How old are you? ");
-                if (Int32.TryParse(Console.ReadLine(), out age))
-                {
-                    if (age <= 0)
-                    {
-                    }
-                    else
-                    {
-                        done1 = true;
-                    }
-                }
-            }
-*/
-
             string program;
             bool done = false;
 
@@ -101,44 +55,156 @@
                 }
             }
 
+// PROGRAM ONE --------------------------------------------------------------------------------------------------------------------------------------
+
             static void Program1()
             {
-                Console.WriteLine("Running Program 1... ");
+                int minNum, maxNum, userAnswer;
+                bool done, done1, done2;
+                done = false;
+                done1 = false;
+                done2 = false;
+
+                Console.WriteLine();
+                Console.WriteLine("Running Prompter... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
+
+                do
+                {
+                    Console.Write("Enter a minimum value:  ");
+                    if (Int32.TryParse(Console.ReadLine(), out minNum))
+                    {
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        done = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid Input");
+                        Thread.Sleep(1000);
+                        Console.WriteLine();
+                    }
+                } while(!done);
+
+                do
+                {
+                    Console.Write("Enter a maximum value:  ");
+                    if (Int32.TryParse(Console.ReadLine(), out maxNum))
+                    {
+                        if (maxNum <= minNum)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Maximum value can not be less than minimum value.");
+                            Console.WriteLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                            Thread.Sleep(1000);
+                            done1 = true;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid Input");
+                        Thread.Sleep(1000);
+                        Console.WriteLine();
+                    }
+                } while(!done1);
+
+                do
+                {
+                    Console.Write($"Enter a number between {minNum} and {maxNum}:  ");
+                    if (Int32.TryParse(Console.ReadLine(), out userAnswer))
+                    {
+                        if (userAnswer <= maxNum && userAnswer >= minNum)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Well Done!");
+                            Thread.Sleep(1000);
+                            done2 = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Invalid Input");
+                            Thread.Sleep(1000);
+                            Console.WriteLine();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid Input");
+                        Thread.Sleep(1000);
+                        Console.WriteLine();
+                    }
+                } while(!done2);
+
+                Console.WriteLine();
+                Console.WriteLine("Program Finished, press ENTER to continue to menu");
+                Console.ReadLine();
             }
+
+// PROGRAM TWO --------------------------------------------------------------------------------------------------------------------------------------
 
             static void Program2()
             {
+                
+
                 Console.WriteLine("Running Program 2... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
+
+
             }
+
+// PROGRAM THREE ------------------------------------------------------------------------------------------------------------------------------------
 
             static void Program3()
             {
+
+
                 Console.WriteLine("Running Program 3... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
+
+
             }
+
+// PROGRAM FOUR -------------------------------------------------------------------------------------------------------------------------------------
+
 
             static void Program4()
             {
+
+
                 Console.WriteLine("Running Program 4... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
+
+
             }
+
+// PROGRAM FIVE -------------------------------------------------------------------------------------------------------------------------------------
 
             static void Program5()
             {
+
+
                 Console.WriteLine("Running Program 5... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
+
+
             }
 
 
