@@ -7,7 +7,7 @@ Notes:
 
 Program 1:
   - make sure user cant put a max number that is smaller than the min number
-  - hello
+  - 
 
 Program 2:
   - 
