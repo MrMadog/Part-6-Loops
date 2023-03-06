@@ -1,4 +1,6 @@
-﻿namespace Part_6___Loops
+﻿using System.Net.Security;
+
+namespace Part_6___Loops
 {
     internal class Program
     {
@@ -146,7 +148,7 @@
                 } while(!done2);
 
                 Console.WriteLine();
-                Console.WriteLine("Program Finished, press ENTER to continue to menu");
+                Console.WriteLine("Program finished, press ENTER to continue to menu");
                 Console.ReadLine();
             }
 
@@ -154,27 +156,66 @@
 
             static void Program2()
             {
-                
+                bool done = false;
+                int number;
 
-                Console.WriteLine("Running Program 2... ");
+                Console.WriteLine();
+                Console.WriteLine("Running Percent Passer... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
 
 
+                Console.WriteLine("Enter 'Q' to when you are finished printing scores.");
+                do
+                {
+                    Console.Write("Enter a score (0 - 100):  ");
+                    while (Int32.TryParse(Console.ReadLine(), out number))
+                    {
+                        if (number > 100)
+                        {
+                            Console.WriteLine("Invalid Input");
+                        }
+                        Console.WriteLine(number);
+                    }
+                    done = true;
+                } while(!done);
+                
+                Console.WriteLine(number);
             }
 
 // PROGRAM THREE ------------------------------------------------------------------------------------------------------------------------------------
 
             static void Program3()
             {
+                int number, oddSum;
+                oddSum = 0;
 
-
-                Console.WriteLine("Running Program 3... ");
+                Console.WriteLine();
+                Console.WriteLine("Running Odd Sum... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
 
+                Console.Write("Enter a number: ");
+                number = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < number + 1; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        oddSum += i;
+                    }
+                }
+                Console.WriteLine();
+                Console.WriteLine($"You entered; {number}, and the odd sum is; {oddSum}. ");
+
+                Console.WriteLine();
+                Console.WriteLine("Program finished, press ENTER to continue to menu");
+                Console.ReadLine();
 
             }
 
@@ -184,8 +225,8 @@
             static void Program4()
             {
 
-
-                Console.WriteLine("Running Program 4... ");
+                Console.WriteLine();
+                Console.WriteLine("Running Random Numbers... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
@@ -198,8 +239,8 @@
             static void Program5()
             {
 
-
-                Console.WriteLine("Running Program 5... ");
+                Console.WriteLine();
+                Console.WriteLine("Running Dice Game... ");
                 Thread.Sleep(1000);
                 Console.WriteLine();
                 Console.WriteLine();
