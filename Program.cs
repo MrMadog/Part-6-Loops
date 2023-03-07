@@ -157,7 +157,9 @@ namespace Part_6___Loops
             static void Program2()
             {
                 bool done = false;
-                int number;
+                int score, answers;
+                double percent;
+                answers = 0;
 
                 Console.WriteLine();
                 Console.WriteLine("Running Percent Passer... ");
@@ -166,22 +168,30 @@ namespace Part_6___Loops
                 Console.WriteLine();
 
 
-                Console.WriteLine("Enter 'Q' to when you are finished printing scores.");
+                Console.WriteLine("Enter a negative number to quit. ");
                 do
                 {
-                    Console.Write("Enter a score (0 - 100):  ");
-                    while (Int32.TryParse(Console.ReadLine(), out number))
+                    Console.WriteLine("Enter a score:  ");
+
+                    score = Convert.ToInt32(Console.ReadLine());
+
+                    if (score < 0)
                     {
-                        if (number > 100)
-                        {
-                            Console.WriteLine("Invalid Input");
-                        }
-                        Console.WriteLine(number);
+                        Console.WriteLine("Quitting... ");
+                        done = true;
                     }
-                    done = true;
+                    else if (score >= 0 && score <= 100)
+                    {
+                        answers += 1;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Input");
+                    }
+
                 } while(!done);
-                
-                Console.WriteLine(number);
+                Console.WriteLine(answers);
             }
 
 // PROGRAM THREE ------------------------------------------------------------------------------------------------------------------------------------

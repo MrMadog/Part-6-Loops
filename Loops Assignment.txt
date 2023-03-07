@@ -7,13 +7,14 @@ Notes:
 
 Program 1:
   - make sure user cant put a max number that is smaller than the min number
-  - 
+  - done ---
 
 Program 2:
+  - check to make sure its a number
   - 
 
 Program 3:
-  - 
+  - done ---
 
 Program 4:
   - 
